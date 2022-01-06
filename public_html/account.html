@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Account - SHERRY'S STORE</title>
+        <link rel='stylesheet' href="finalcss.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">   
+   </head>
+    <body>
+       
+        <div class="container">
+       <div class= "navbar">
+            <div class="logo">
+                <a href="index.html"> <img src="image/logo.png"width="225px"> </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li><!-- comment -->
+                    <li><a href="product.html">PRODUCT</a></li>
+                    <li><a href="">ABOUT</a></li><!-- comment -->
+                    <li><a href="">CONTACT</a></li><!-- comment -->
+                    <li><a href="account.html">ACCOUNT</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="image/cart.png" width="30" height="30"> </a>
+            </div>
+        </div>
+        <!-- account page -->
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/dex.jpg" width="100%">
+                        
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register">Register</span>
+                                <hr id="indicator">    
+                            </div>
+                            <form id="loginform">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="password">
+                                <button type="submit" class="btn">login</button>
+                                <a href="">Forget Password</a>
+                            </form>
+                            <form id="regform">
+                                <input type="text" placeholder="Username">
+                                 <input type="email" placeholder="Email">
+                                <input type="password" placeholder="password">
+                                <button type="submit" class="btn">Register</button>
+                               
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+ 
+           <div class="footer">
+               <div class="container">
+                   <div class="row">
+                       <div class="footer-col-1">
+                           <img src="image/logo.png">
+                           <p>our purpose is to sustainbly make the pleasure and 
+                           benifits of sports acessible to many.</p>
+                       </div>
+                       <div class="footer-col-2">
+                           <h3> Important Links</h3>
+                           <ul>
+                               <li> Instagram</li> 
+                               <li>Facebook</li>
+                               <li>return policy</li>
+                           </ul>
+                       </div>
+                       
+                   </div>
+                   <hr>
+                   <p class="copyright"> Copyright 2020 - Sherry Store</p>
+                   
+               </div>
+           </div>
+        <script>
+            var menuitems =document.getElementById("menuitems");
+            menuitems.style.maxheight = "0px";
+            function menutoggle(){
+                if(menuitems.style.maxheight=="0px")
+                {
+                    menuitems.style.maxheight ="200px";
+                }
+                else
+                {
+                    menuitems.style.maxheight ="0px";
+                }
+            } 
+            </script>
+            <script>
+                
+                var loginfoorm = document.getElementById("loginform");
+                var regform = document.getElementById("regform");
+                var indcator = document.getElementById("indicator");
+                function register(){
+                    regform.style.transform = "translateX(0px)";
+                    loginform.style.transform = "translate(0px)";
+                    indicator.style.transform = "translate(0px)";
+                }
+                function login(){
+                    regform.style.transform = "translateX(300px)";
+                    loginform.style.transform = "translate(300px)";
+                    indicator.style.transform = "translate(0px)";
+                }
+                
+            </script>
+    </body>
+</html>
